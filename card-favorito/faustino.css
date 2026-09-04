@@ -1,0 +1,228 @@
+/* ==============================================
+   faustino.css — Página JDM / Carros Japoneses
+   Estilo: Design Japonês | Vermelho + Branco + Preto
+   ============================================== */
+
+/* ---------- RESET E VARIÁVEIS ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --vermelho-japao: #BC002D;
+    --branco: #FFFFFF;
+    --preto: #121212;
+    --cinza-escuro: #2A2A2A;
+    --cinza-claro: #F8F8F8;
+    --sakura: #FFD1DC;
+    --dourado: #C8A94E;
+    --sombra-suave: 0 4px 12px rgba(0,0,0,0.08);
+    --borda-destaque: 4px solid var(--vermelho-japao);
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--cinza-claro);
+    color: var(--preto);
+    line-height: 1.7;
+    background-image: 
+        radial-gradient(circle at top center, rgba(188, 0, 45, 0.04) 0%, transparent 60%);
+    background-attachment: fixed;
+    padding-bottom: 60px;
+}
+
+/* ---------- CABEÇALHO DENTRO DO MAIN ---------- */
+main > header {
+    background: linear-gradient(135deg, var(--vermelho-japao) 0%, #D60033 100%);
+    color: var(--branco);
+    text-align: center;
+    padding: 35px 20px;
+    margin-bottom: 30px;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 16px rgba(188, 0, 45, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+main > header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    height: 180px;
+    border: 2px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+main > header h1 {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 8px;
+}
+
+main > header p {
+    font-size: 1.05rem;
+    opacity: 0.92;
+}
+
+/* ---------- CONTEÚDO PRINCIPAL ---------- */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: block;
+}
+
+/* ---------- IMAGENS E FIGURE ---------- */
+figure {
+    text-align: center;
+    margin: 30px 0;
+    padding: 12px;
+    background: var(--branco);
+    border-radius: 6px;
+    box-shadow: var(--sombra-suave);
+    border-left: var(--borda-destaque);
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: var(--cinza-escuro);
+    font-style: italic;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+/* ---------- TÍTULOS (h2 até h7) ---------- */
+h2, h3, h4, h5, h6, h7 {
+    color: var(--vermelho-japao);
+    margin: 30px 0 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(188, 0, 45, 0.15);
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-size: 1.6rem;
+    border-bottom-width: 3px;
+    border-bottom-color: var(--vermelho-japao);
+}
+
+h3 { font-size: 1.35rem; }
+h4 { font-size: 1.2rem; color: #B00028; }
+h5 { font-size: 1.15rem; color: #9A0023; }
+h6 { font-size: 1.1rem; color: #85001F; }
+h7 { 
+    font-size: 1.05rem; 
+    color: var(--cinza-escuro);
+    display: block;
+    margin-top: 40px;
+}
+
+/* ---------- PARÁGRAFOS ---------- */
+p {
+    margin-bottom: 18px;
+    text-align: justify;
+    font-size: 1rem;
+    color: #2A2A2A;
+}
+
+/* ---------- LISTAS ---------- */
+ul {
+    list-style: none;
+    margin: 20px 0;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 10px 14px;
+    margin-bottom: 6px;
+    background-color: var(--branco);
+    border-left: 3px solid var(--vermelho-japao);
+    border-radius: 4px;
+    transition: all 0.25s ease;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+ul li:hover {
+    background-color: #FFF0F3;
+    transform: translateX(6px);
+    border-left-width: 4px;
+}
+
+/* Listas dentro de fichas técnicas */
+h5 + ul, h6 + ul {
+    background: linear-gradient(to right, #FAFAFA, #FFFFFF);
+    padding: 20px 25px;
+    border-radius: 6px;
+    border: 1px solid #EEE;
+}
+
+h5 + ul li, h6 + ul li {
+    border-left: 2px solid var(--vermelho-japao);
+    background: transparent;
+    padding: 8px 12px;
+}
+
+h5 + ul li:hover, h6 + ul li:hover {
+    transform: none;
+    background: #FFF5F7;
+}
+
+/* ---------- ÁREA DA HISTÓRIA ---------- */
+body > p {
+    background-color: var(--branco);
+    padding: 30px;
+    margin: 40px 20px;
+    border-radius: 6px;
+    border-left: 5px solid var(--vermelho-japao);
+    box-shadow: var(--sombra-suave);
+    line-height: 1.8;
+}
+
+/* ---------- LINKS DE NAVEGAÇÃO ---------- */
+a {
+    display: inline-block;
+    color: var(--vermelho-japao);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 18px;
+    margin: 8px;
+    background-color: var(--branco);
+    border: 2px solid var(--vermelho-japao);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: var(--vermelho-japao);
+    color: var(--branco);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(188, 0, 45, 0.2);
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 768px) {
+    main > header h1 { font-size: 1.5rem; }
+    body > p, main { padding: 15px; }
+    a { display: block; margin: 6px 0; text-align: center; }
+    ul li:hover { transform: none; }
+}
